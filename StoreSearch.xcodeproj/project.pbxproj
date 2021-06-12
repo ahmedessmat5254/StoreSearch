@@ -13,6 +13,7 @@
 		BEF449202674FC33003C1DDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF4491E2674FC33003C1DDD /* Main.storyboard */; };
 		BEF449222674FC35003C1DDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF449212674FC35003C1DDD /* Assets.xcassets */; };
 		BEF449252674FC35003C1DDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF449232674FC35003C1DDD /* LaunchScreen.storyboard */; };
+		BEF4492D267533CC003C1DDD /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF4492C267533CC003C1DDD /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BEF449212674FC35003C1DDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEF449242674FC35003C1DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEF449262674FC35003C1DDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF4492C267533CC003C1DDD /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				BEF4491A2674FC33003C1DDD /* SceneDelegate.swift */,
 				BEF4491C2674FC33003C1DDD /* StoreSearchVC.swift */,
 				BEF4491E2674FC33003C1DDD /* Main.storyboard */,
+				BEF4492C267533CC003C1DDD /* SearchResult.swift */,
 				BEF449212674FC35003C1DDD /* Assets.xcassets */,
 				BEF449232674FC35003C1DDD /* LaunchScreen.storyboard */,
 				BEF449262674FC35003C1DDD /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				BEF4491D2674FC33003C1DDD /* StoreSearchVC.swift in Sources */,
 				BEF449192674FC33003C1DDD /* AppDelegate.swift in Sources */,
+				BEF4492D267533CC003C1DDD /* SearchResult.swift in Sources */,
 				BEF4491B2674FC33003C1DDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
