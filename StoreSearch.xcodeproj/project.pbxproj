@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6D864F2678193C00D02CB5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D864E2678193C00D02CB5 /* SearchResultCell.swift */; };
+		BEEAFD972678D8EC00439B2D /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEAFD962678D8EC00439B2D /* SearchResultCell.xib */; };
+		BEEAFD992678EA0800439B2D /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEAFD982678EA0800439B2D /* NothingFoundCell.xib */; };
 		BEF449192674FC33003C1DDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF449182674FC33003C1DDD /* AppDelegate.swift */; };
 		BEF4491B2674FC33003C1DDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF4491A2674FC33003C1DDD /* SceneDelegate.swift */; };
 		BEF4491D2674FC33003C1DDD /* StoreSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF4491C2674FC33003C1DDD /* StoreSearchVC.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE6D864E2678193C00D02CB5 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		BEEAFD962678D8EC00439B2D /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = "../../../../Downloads/ia-materials-editions-9.0/04-store-search/Source Code/33-Custom-table-cells/chapter-33-final/StoreSearch/SearchResultCell.xib"; sourceTree = "<group>"; };
+		BEEAFD982678EA0800439B2D /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		BEF449152674FC33003C1DDD /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF449182674FC33003C1DDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF4491A2674FC33003C1DDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +67,10 @@
 				BEF449182674FC33003C1DDD /* AppDelegate.swift */,
 				BEF4491A2674FC33003C1DDD /* SceneDelegate.swift */,
 				BEF4491C2674FC33003C1DDD /* StoreSearchVC.swift */,
+				BE6D864E2678193C00D02CB5 /* SearchResultCell.swift */,
 				BEF4491E2674FC33003C1DDD /* Main.storyboard */,
+				BEEAFD962678D8EC00439B2D /* SearchResultCell.xib */,
+				BEEAFD982678EA0800439B2D /* NothingFoundCell.xib */,
 				BEF4492C267533CC003C1DDD /* SearchResult.swift */,
 				BEF449212674FC35003C1DDD /* Assets.xcassets */,
 				BEF449232674FC35003C1DDD /* LaunchScreen.storyboard */,
@@ -129,6 +138,8 @@
 			files = (
 				BEF449252674FC35003C1DDD /* LaunchScreen.storyboard in Resources */,
 				BEF449222674FC35003C1DDD /* Assets.xcassets in Resources */,
+				BEEAFD972678D8EC00439B2D /* SearchResultCell.xib in Resources */,
+				BEEAFD992678EA0800439B2D /* NothingFoundCell.xib in Resources */,
 				BEF449202674FC33003C1DDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +155,7 @@
 				BEF449192674FC33003C1DDD /* AppDelegate.swift in Sources */,
 				BEF4492D267533CC003C1DDD /* SearchResult.swift in Sources */,
 				BEF4491B2674FC33003C1DDD /* SceneDelegate.swift in Sources */,
+				BE6D864F2678193C00D02CB5 /* SearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
