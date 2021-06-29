@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE55623626852DBC00F79DCF /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE55623526852DBC00F79DCF /* SearchResultCell.xib */; };
 		BE6D864F2678193C00D02CB5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D864E2678193C00D02CB5 /* SearchResultCell.swift */; };
 		BEB589DE2680E6BD00CD351C /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB589DD2680E6BD00CD351C /* LoadingCell.xib */; };
-		BEEAFD972678D8EC00439B2D /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEAFD962678D8EC00439B2D /* SearchResultCell.xib */; };
 		BEEAFD992678EA0800439B2D /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEAFD982678EA0800439B2D /* NothingFoundCell.xib */; };
 		BEF449192674FC33003C1DDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF449182674FC33003C1DDD /* AppDelegate.swift */; };
 		BEF4491B2674FC33003C1DDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF4491A2674FC33003C1DDD /* SceneDelegate.swift */; };
@@ -21,9 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE55623526852DBC00F79DCF /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = ../../../../../../.Trash/SearchResultCell.xib; sourceTree = "<group>"; };
 		BE6D864E2678193C00D02CB5 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		BEB589DD2680E6BD00CD351C /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
-		BEEAFD962678D8EC00439B2D /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		BEEAFD982678EA0800439B2D /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		BEF449152674FC33003C1DDD /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF449182674FC33003C1DDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		BEB589DB2680DFAF00CD351C /* CutomCell */ = {
 			isa = PBXGroup;
 			children = (
-				BEEAFD962678D8EC00439B2D /* SearchResultCell.xib */,
+				BE55623526852DBC00F79DCF /* SearchResultCell.xib */,
 				BEEAFD982678EA0800439B2D /* NothingFoundCell.xib */,
 				BEB589DD2680E6BD00CD351C /* LoadingCell.xib */,
 			);
@@ -190,8 +190,8 @@
 				BEF449252674FC35003C1DDD /* LaunchScreen.storyboard in Resources */,
 				BEF449222674FC35003C1DDD /* Assets.xcassets in Resources */,
 				BEB589DE2680E6BD00CD351C /* LoadingCell.xib in Resources */,
-				BEEAFD972678D8EC00439B2D /* SearchResultCell.xib in Resources */,
 				BEEAFD992678EA0800439B2D /* NothingFoundCell.xib in Resources */,
+				BE55623626852DBC00F79DCF /* SearchResultCell.xib in Resources */,
 				BEF449202674FC33003C1DDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
