@@ -11,8 +11,10 @@ class StoreSearchVC: UIViewController {
 
 @IBOutlet var searchBar: UISearchBar!
 @IBOutlet var tableView: UITableView!
-
-var searchResults = [SearchResult]()
+@IBOutlet var segmentedControl: UISegmentedControl!
+  
+    
+    var searchResults = [SearchResult]()
 var hasSearched = false
 var isLoading = false
 var dataTask: URLSessionDataTask?
@@ -29,7 +31,7 @@ enum TableView {
 
 override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+    tableView.contentInset = UIEdgeInsets(top: 94, left: 0, bottom: 0, right: 0)
     
     var cellNib = UINib(nibName: TableView.CellIdentifiers.searchResultCell, bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.searchResultCell)
@@ -44,11 +46,22 @@ override func viewDidLoad() {
 }
 
 
-
+@IBAction func segmentChanged(_ sender: UISegmentedControl) {
+    print("Segment changed: \(sender.selectedSegmentIndex)")
+    peformSearch()
+    }
+    
 //MARK: - Helper Methods
-func itunesURL(searchText: String) -> URL {
+func itunesURL(searchText: String, category: Int) -> URL {
+    let kind: String
+    switch category {
+    case 1: kind = "musicTrack"
+    case 2: kind = "software"
+    case 3: kind = "ebook"
+    default: kind = ""
+    }
     let encodingText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-    let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200",encodingText)
+    let urlString = String(format: "https://itunes.apple.com/search?" + "term=%@&limit=200&entity=\(kind)",encodingText)
     let url = URL(string: urlString)
     return url!
 }
@@ -83,6 +96,11 @@ extension StoreSearchVC: UISearchBarDelegate {
 
 func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     
+    peformSearch()
+}
+    
+func peformSearch() {
+    
     searchBar.resignFirstResponder()
     isLoading = true
     tableView.reloadData()
@@ -92,11 +110,11 @@ func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         hasSearched = true
         searchResults = []
         
-        let url = itunesURL(searchText: searchBar.text!)
+        let url = itunesURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex)
         let session = URLSession.shared
         dataTask = session.dataTask(with: url) { data, response, error in
             if let error = error as NSError?, error.code == -999 {
-                return 
+                return
             } else if let httpsResponse = response as? HTTPURLResponse, httpsResponse.statusCode == 200 {
                 if let data = data {
                     self.searchResults = self.parse(data: data)

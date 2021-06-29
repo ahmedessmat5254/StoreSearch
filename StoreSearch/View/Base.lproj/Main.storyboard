@@ -40,13 +40,36 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="SHb-pZ-ojX"/>
                                 </connections>
                             </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-FT-QJw">
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="eYO-l6-w8V">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="KQL-VI-hKN">
+                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ku7-hP-1QV"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RAG-FT-QJw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="2aq-Gi-JBy"/>
                             <constraint firstAttribute="trailing" secondItem="Fhs-uu-swB" secondAttribute="trailing" id="9uT-1l-h8h"/>
                             <constraint firstItem="7Ti-un-9xu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="M6Y-n2-yO5"/>
+                            <constraint firstItem="RAG-FT-QJw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aGB-2R-24d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ti-un-9xu" secondAttribute="bottom" id="aqJ-R5-L2G"/>
+                            <constraint firstItem="RAG-FT-QJw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="axZ-46-9vL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ti-un-9xu" secondAttribute="trailing" id="eHh-jm-nW4"/>
                             <constraint firstItem="7Ti-un-9xu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hpn-bO-8T9"/>
                             <constraint firstItem="Fhs-uu-swB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vWw-d1-b3E"/>
@@ -55,12 +78,13 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="Fhs-uu-swB" id="jvC-nn-lQD"/>
+                        <outlet property="segmentedControl" destination="KQL-VI-hKN" id="afz-5C-rnx"/>
                         <outlet property="tableView" destination="7Ti-un-9xu" id="XMe-uz-5o1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="139"/>
+            <point key="canvasLocation" x="-20" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
