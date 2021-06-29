@@ -15,7 +15,8 @@ class StoreSearchVC: UIViewController {
 var searchResults = [SearchResult]()
 var hasSearched = false
 var isLoading = false
-
+var dataTask: URLSessionDataTask?
+    
 enum TableView {
     enum CellIdentifiers {
         static let searchResultCell = "SearchResultCell"
@@ -87,14 +88,15 @@ func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     tableView.reloadData()
     
     if !searchBar.text!.isEmpty {
+        dataTask?.cancel()
         hasSearched = true
         searchResults = []
         
         let url = itunesURL(searchText: searchBar.text!)
         let session = URLSession.shared
-        let dataTask = session.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Failure! \(error.localizedDescription)")
+        dataTask = session.dataTask(with: url) { data, response, error in
+            if let error = error as NSError?, error.code == -999 {
+                return 
             } else if let httpsResponse = response as? HTTPURLResponse, httpsResponse.statusCode == 200 {
                 if let data = data {
                     self.searchResults = self.parse(data: data)
@@ -103,6 +105,7 @@ func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
                         self.isLoading = false
                         self.tableView.reloadData()
                     }
+                    return
                 }
             } else {
                 print("Failure!\(response!)")
@@ -114,7 +117,7 @@ func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
                 self.showNetworkError()
             }
         }
-        dataTask.resume()
+        dataTask?.resume()
     }
 }
 
